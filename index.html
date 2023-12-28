@@ -11,41 +11,48 @@
     />
 
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App Practise</title>
   </head>
   <body>
     <div class="weather-app-container">
-      <form class="">
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          required
-          class="form-input"
-        />
-        <input type="submit" value="Search" class="search-button" />
-        <div>
-          <h1>Paris</h1>
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="form-input"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <h1 class="weather-app-city" id="city-header">City</h1>
 
-          <p>
+          <p class="weather-app-details">
             Saturday 23:31, overcast clouds
             <br />
-            Humidity: 82%, Wind: 7.72km/h
+            Humidity: <strong>82%</strong>, Wind: <strong>7.72km/h</strong>
           </p>
+
+          <div class="weather-app-temperature">17C</div>
         </div>
-        <div>17C</div>
-      </form>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/anafletcher"> Alicia Fletcher</a> and is
+        <a href="https://github.com/anafletcher/Weather-project-practice">
+          on GitHub</a
+        >
+        and is hosted
+        <a href="https://weather-app-further-practise.netlify.app/">
+          on Netlify</a
+        >
+      </footer>
     </div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/anafletcher"> Alicia Fletcher</a> and is
-      <a href="https://github.com/anafletcher/Weather-project-practice">
-        on GitHub</a
-      >
-      and is hosted
-      <a href="https://weather-app-further-practise.netlify.app/">
-        on Netlify</a
-      >
-    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
