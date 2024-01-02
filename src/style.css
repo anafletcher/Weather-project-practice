@@ -50,6 +50,8 @@ a {
 .search-button {
   font-size: 16px;
   padding: 15px 20px;
+  background-color: rgb(73, 16, 126);
+  color: whitesmoke;
   border: 1px solid whitesmoke;
   border: none;
   border-radius: 5px;
@@ -76,4 +78,10 @@ a {
 
 .weather-app-details strong {
   color: rgb(202, 38, 66);
+}
+
+.weather-app-temperature {
+  font-size: 54px;
+  font-weight: bolder;
+  margin-top: 25px;
 }

@@ -30,15 +30,18 @@
       </header>
       <main>
         <div class="weather-app-data">
-          <h1 class="weather-app-city" id="city-header">City</h1>
-
-          <p class="weather-app-details">
-            Saturday 23:31, overcast clouds
-            <br />
-            Humidity: <strong>82%</strong>, Wind: <strong>7.72km/h</strong>
-          </p>
-
-          <div class="weather-app-temperature">17C</div>
+          <div>
+            <h1 class="weather-app-city" id="city-header"></h1>
+            <div>
+              <p class="weather-app-details">
+                <span id="time"></span><span id="conditions"></span>
+                <br />
+                Humidity: <strong id="humidity">82%</strong>, Wind:
+                <strong id="wind-speed">7.72km/h</strong>
+              </p>
+            </div>
+          </div>
+          <div class="weather-app-temperature" id="temperature"></div>
         </div>
       </main>
       <footer>
