@@ -34,14 +34,19 @@
             <h1 class="weather-app-city" id="city-header"></h1>
             <div>
               <p class="weather-app-details">
-                <span id="time"></span><span id="conditions"></span>
+                <span id="time"></span> <br />Current conditions:
+                <span id="conditions"></span>
                 <br />
                 Humidity: <strong id="humidity">82%</strong>, Wind:
                 <strong id="wind-speed">7.72km/h</strong>
               </p>
             </div>
           </div>
-          <div class="weather-app-temperature" id="temperature"></div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon" id="icon"></div>
+            <div class="weather-app-temperature" id="temperature"></div>
+            <div class="weather-app-temperature-unit">°C</div>
+          </div>
         </div>
       </main>
       <footer>

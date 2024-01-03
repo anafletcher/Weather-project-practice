@@ -77,11 +77,27 @@ a {
 }
 
 .weather-app-details strong {
-  color: rgb(202, 38, 66);
+  color: rgb(99, 7, 23);
+}
+
+.weather-app-temperature-container {
+  display: flex;
 }
 
 .weather-app-temperature {
-  font-size: 54px;
+  font-size: 68px;
   font-weight: bolder;
-  margin-top: 25px;
+  margin: 15px 0 0 10px;
+  line-height: 100px;
+}
+
+.weather-app-icon {
+  font-size: 44px;
+  width: 100px;
+  height: 100px;
+}
+
+.weather-app-temperature-unit {
+  margin: 30px 10px 0 2px;
+  font-size: 28px;
 }
