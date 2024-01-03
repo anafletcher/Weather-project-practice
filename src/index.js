@@ -42,7 +42,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes} GMT`;
 }
 
 function submitCity(event) {

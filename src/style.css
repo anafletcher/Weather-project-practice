@@ -1,11 +1,13 @@
 body {
-  background-color: rgb(202, 171, 232);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/063/original/hotairbaloons.jpg?1704286980);
   font-family: "Tajawal", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
   padding: 0 0 20px;
-  border-bottom: 1px solid rgb(73, 16, 126);
+  border-bottom: 1px solid whitesmoke;
 }
 
 h1 {
@@ -21,18 +23,20 @@ footer {
   text-align: center;
   font-size: 14px;
   opacity: 0.8;
+  padding: 10px;
+  border-top: 1px solid whitesmoke;
 }
 
 a {
-  color: rgb(43, 6, 79);
+  color: #35879c;
 }
 
 .weather-app-container {
-  background-color: blueviolet;
+  background-color: #08374d;
   color: white;
   border-radius: 20px;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 30px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -50,7 +54,7 @@ a {
 .search-button {
   font-size: 16px;
   padding: 15px 20px;
-  background-color: rgb(73, 16, 126);
+  background-color: #35879c;
   color: whitesmoke;
   border: 1px solid whitesmoke;
   border: none;
@@ -77,7 +81,7 @@ a {
 }
 
 .weather-app-details strong {
-  color: rgb(99, 7, 23);
+  color: #f2979d;
 }
 
 .weather-app-temperature-container {
