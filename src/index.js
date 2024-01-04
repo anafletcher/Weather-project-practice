@@ -18,6 +18,16 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 
+  let footerEmoji = document.querySelector("#footer-emoji");
+  if (temperature < 2) {
+    footerEmoji.innerHTML = String.fromCodePoint(0x1f976);
+  } else if (temperature < 25) {
+    footerEmoji.innerHTML = String.fromCodePoint(0x1f60a);
+  } else {
+    footerEmoji.innerHTML = String.fromCodePoint(0x1f975);
+  }
+
+  getForecast(response.data.city);
   console.log(response);
 }
 
@@ -58,5 +68,44 @@ function searchCity(city) {
 
 let searchFormElement = document.querySelector("#seach-form");
 searchFormElement = addEventListener("submit", submitCity);
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "f3c5613898a1043cbte4a77d8c1bcfo0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
+        <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${formatDay(day.time)}</div>
+            <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
+            <div class="weather-forecast-temperatures">
+              <strong>${Math.round(day.temperature.maximum)}°</strong>
+              </div>
+              <div class="weather-forecast-tempature" id="min-temp">${Math.round(
+                day.temperature.minimum
+              )}°</div>
+            </div>
+        </div>
+        `;
+    }
+  });
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = forecastHtml;
+}
 
 searchCity("London");

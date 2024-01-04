@@ -7,7 +7,7 @@ body {
 
 header {
   padding: 0 0 20px;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid #f0ebe5;
 }
 
 h1 {
@@ -24,16 +24,22 @@ footer {
   font-size: 14px;
   opacity: 0.8;
   padding: 10px;
-  border-top: 1px solid whitesmoke;
+  border-top: 1px solid #f0ebe5;
 }
 
 a {
   color: #35879c;
 }
 
+a:hover {
+  transform-origin: center center;
+  transform: scale(2);
+  font-weight: bold;
+}
+
 .weather-app-container {
-  background-color: #08374d;
-  color: white;
+  background-color: #0f3e54;
+  color: #f0ebe5;
   border-radius: 20px;
   max-width: 600px;
   margin: 50px auto;
@@ -42,6 +48,7 @@ a {
 }
 
 .form-input {
+  background-color: #f0ebe5;
   padding: 15px 20px;
   border: 1px solid grey;
   border-radius: 5px;
@@ -55,8 +62,8 @@ a {
   font-size: 16px;
   padding: 15px 20px;
   background-color: #35879c;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
+  color: #f0ebe5;
+  border: 1px solid #f0ebe5;
   border: none;
   border-radius: 5px;
   width: 20%;
@@ -89,19 +96,84 @@ a {
 }
 
 .weather-app-temperature {
-  font-size: 68px;
+  font-size: 90px;
   font-weight: bolder;
   margin: 15px 0 0 10px;
   line-height: 100px;
 }
 
 .weather-app-icon {
+  margin-top: -2px;
   font-size: 44px;
   width: 100px;
   height: 100px;
 }
 
 .weather-app-temperature-unit {
-  margin: 30px 10px 0 2px;
-  font-size: 28px;
+  margin: 20px 10px 0 5px;
+  font-size: 30px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  text-align: center;
+  color: #f0ebe5;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-date {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.weather-forecast-date:hover {
+  transform-origin: center center;
+  transform: scale(2);
+  font-weight: bold;
+}
+
+.weather-forecast-temperatures {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f2979d;
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+
+#min-temp {
+  color: #f0ebe5;
+  opacity: 0.7;
+}
+
+#min-temp:hover {
+  transform-origin: center center;
+  transform: scale(1.4);
+  font-weight: bold;
+}
+
+.weather-forecast-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-forecast-icon:hover {
+  transform-origin: center center;
+  transform: scale(2);
+  font-weight: bold;
+}
+
+.weather-forecast-temperatures:hover {
+  transform-origin: center center;
+  transform: scale(2);
+  font-weight: bold;
 }
